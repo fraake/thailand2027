@@ -246,7 +246,7 @@
         b.onclick = () => showLocation(i);
         locMenu.appendChild(b);
       });
-      locationsMap.fitBounds(locations.map((x) => x.coord));
+      locationsMap.setView([7.55, 99.0],8);
       function showLocation(i) {
         const l = locations[i];
         locTitle.textContent = l.title;
