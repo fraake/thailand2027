@@ -88,20 +88,38 @@
           grid-template-rows: auto 45vh auto;
         }
       }
+      .intro-text {
+        max-width: 900px;
+        margin: 30px auto;
+        line-height: 1.8;
+        font-size: 1.15rem;
+        color: #dbeafe;
+      }
     </style>
   </head>
   <body>
     <div id="homePage" class="page active">
       <div class="hero">
-        <img src="images/hero.jpg"
+        <img
+          src="images/hero.jpg"
           style="
-            width:100%;
-            max-width:1000px;
-            border-radius:20px;
-            margin-bottom:30px;
-          ">
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+          "
+        />
         <h1>🏝 Thailand Family Adventure 2027</h1>
-        <p>Velg visning</p>
+        <p class="intro-text">
+          18 netter · 3 helt forskjellige opplevelser. Denne reisen tar oss med
+          gjennom tre ulike sider av Sør-Thailand. Vi starter med komfort og
+          bassengliv ved Krabis vakre kyst, fortsetter inn i den tropiske
+          regnskogen med spennende naturopplevelser og avslutter på en liten øy
+          i Andamanhavet med kritthvite strender, snorkling og god tid til å
+          nyte øylivet. Det blir en reise med både avslapning og eventyr, der vi
+          får oppleve alt fra dramatiske kalksteinsklipper og frodig jungel til
+          fargerike fisker under havoverflaten.
+        </p>
         <button onclick="showPage('locationsPage')">📍 Lokasjoner</button
         ><button onclick="showPage('logisticsPage')">✈️ Logistikk</button
         ><button onclick="showPage('economyPage')">💰 Økonomi</button>
@@ -140,93 +158,107 @@
         <button onclick="showPage('homePage')">← Til forsiden</button>
       </div>
       <div style="padding: 20px">
-        <h1>Økonomi</h1>
-        <p>Fly: 72 000 kr</p>
-        <p>Hotell: 45 000 kr</p>
-        <p>Transport: 4 000 kr</p>
-        <h2>Total: 127 000 kr</h2>
+        <h1>Økonomi - for en familie på 4</h1>
+        <p>Fly: 70 000 kr</p>
+        <p>Hotell: 50 000 kr</p>
+        <p>Transport: 5 000 kr</p>
+        <p>Aktiviteter: 10 000 kr</p>
+        <h2>Total: 135 000 kr</h2>
       </div>
     </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
       const locations = [
         {
-          title: "Railay Beach",
-          hotel: "Rayavadee",
-          coord: [8.0059, 98.838],
-          zoom: 13,
-          description: "Kalksteinsklipper, strender og båtturer.",
+          title: " Resort og Komfort (4-6 dager)",
+          hotel: "TBD",
+          coord: [8.030933, 98.824329],
+          zoom: 15,
+          description:
+            "Bassengliv, strandutflukter og tropisk feriestemning - en myk og behagelig start på Thailand-opplevelsen. Forslag til sted: Ao Nang og utflukter til Railay Beach",
           images: [
-            "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1200",
-            "https://images.unsplash.com/photo-1468413253725-0d5181091126?w=1200",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/775792287.jpg?k=6491c4eed63fe798639f92bb0423e1484a89d820bfebeee0c016af3d26680336&o=",
+            "https://cdn.forevervacation.com/uploads/attraction/railay-beach-2053.webp",
+            "https://cf.bstatic.com/xdata/images/hotel/max1024x768/310904605.jpg?k=6f43608b56b0b1c0ddf249c4fb9feb8bf1dde1b3e5b7023648f21c5c2a5fc969&o=",
           ],
         },
         {
-          title: "Koh Lanta",
-          hotel: "Chom Dao Resort",
-          coord: [7.6246, 99.0798],
+          title: " Eventyrlig jungeltur (3-5 dager)",
+          hotel: "TBD",
+          coord: [8.95773, 98.625509],
           zoom: 12,
-          description: "Mangroveskog og kajakk.",
+          description:
+            "Regnskog, tretopphytter, innsjø og naturopplevelser. Forslag til sted: Khao Sok",
           images: [
-            "https://images.unsplash.com/photo-1527631746610-bca00a040d60?w=1200",
+            "https://images.openai.com/static-rsc-4/qHn2mFzKywum6GlBaoJHB4jUhk49tvVSKMRWJ8VAhp2guSW_puTtlmUHbMVXVpT8guRP1qOjGj6xmZudLVBp_3H3GZ245o86Ns_zJg2IyU0uNHFndi2M0H_J53BZxVc8mcqbhDEMnhRAeFG1Q3c4WtvJDQ4wst3edWhsmq055838p1UaHqXGW1GxCr1Q1gpT?purpose=fullsize",
+            "https://images.openai.com/static-rsc-4/YfNczdSA5hGn1oxBMM6Fs8ulnGiqlNCvq6jiviozprGMf007ZB7NTL6eHGNCPr9ndaZfWiux-1nzyQ7M4FkqiLdXj6T9h0yW-cRSi3KvKB7nFNKrqrpubMejFG4pzS8tjpKOrr9g5Xy0Qc_G4BIL-sjoX4aN7KNH7J0iWCMNZrtVRONEiAm4m-zNe1yCuwFQ?purpose=fullsize",
+            "https://khaosoklake.com/wp-content/uploads/2017/04/khao-sok-lake-guilin-2-1.jpg",
           ],
         },
         {
-          title: "Koh Kradan",
-          hotel: "Beach Resort",
-          coord: [7.313, 99.271],
+          title: "Øyliv og snorkling (5-8 dager)",
+          hotel: "TBD",
+          coord: [7.372397, 99.311639],
           zoom: 13,
-          description: "Kritthvite strender og snorkling.",
+          description:
+            "Kritthvite strender, turkis hav, snorkling, koraller og livet på en tropisk øy. Forslag til sted: Koh Mook",
           images: [
-            "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1200",
-          ],
-        },
-        {
-          title: "Koh Rok",
-          hotel: "Dagstur",
-          coord: [7.198, 99.057],
-          zoom: 13,
-          description: "Korallrev og snorkling.",
-          images: [
-            "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200",
+            "https://www.checkpointtravel.no/media/28853/250044462_5070077999674272_471684267994978606_n.jpg?width=2600&height=1950&format=webp&autoorient=true",
+            "https://www.checkpointtravel.no/media/ky0dhkoh/snorkling-naer-krabi_55388104.jpg?width=2600&height=2107&format=webp&autoorient=true",
+            "https://www.checkpointtravel.no/media/14126/20180328-8102018.jpg?rxy=0.5,0.5&width=2600&height=1734&format=webp&autoorient=true",
+            "https://www.checkpointtravel.no/media/14129/svl-marco1.jpg?width=2600&height=1734&format=webp&autoorient=true",
+            "https://www.checkpointtravel.no/media/14133/svl-marco14.jpg?rxy=0.4759353461601386,0.5721162097870258&width=2600&height=1734&format=webp&autoorient=true",
           ],
         },
       ];
       const logistics = [
         {
-          title: "1. Bil til Tromsø Lufthavn",
+          title: "1. Taxi til Tromsø Lufthavn",
           coord: [69.6833, 18.9189],
-          description: "Kjøring til flyplassen.",
+          description: "",
         },
         {
-          title: "2. Fly til København",
+          title: "2. Fly til København (2t og 45 min)",
           coord: [55.6181, 12.656],
-          description: "Første flyetappe.",
+          description: "SAS",
         },
         {
-          title: "3. Fly til Krabi",
+          title: "3. Fly til Krabi (12 timer)",
           coord: [8.0991, 98.9862],
-          description: "Langfly til Thailand.",
+          description:
+            "SAS har direktefly mellom København (CPH) og Krabi (KBV) vinteren 2026/2027. København-Krabi: Tirsdag og Lørdag 23:45. Krabi-København: Onsdag og Søndag 22:50",
         },
         {
-          title: "4. Båt til Railay",
-          coord: [8.0059, 98.838],
-          description: "Longtailbåt.",
+          title: "4. Taxi til Hotellet i Ao Nang(30 min)",
+          coord: [8.03952, 98.816006],
+          description: "Taxi fra flyplassen til hotellet.",
         },
         {
-          title: "5. Båt til Koh Lanta",
-          coord: [7.6246, 99.0798],
-          description: "Båt sørover.",
+          title: "5. Leiebil/Buss til Kao Sok (3 timer)",
+          coord: [8.921239, 98.544226],
+          description: "MÅ SJEKKES UT!!!",
         },
         {
-          title: "6. Båt til Koh Kradan",
-          coord: [7.313, 99.271],
-          description: "Til paradisstrender.",
+          title: "6. Bil/Buss tilbake til Ao Nang (3 timer)",
+          coord: [8.02701, 98.860839],
+          description: "",
         },
         {
-          title: "7. Båt til Koh Rok",
-          coord: [7.198, 99.057],
-          description: "Snorkletur.",
+          title: "7. Båt ut til Koh Mook (2-3 timer)",
+          coord: [7.372986, 99.312332],
+          description: "Sjekk Direct Ferries. Pris ca 500 kr per pers",
+        },
+
+        {
+          title: "8. Båt tilbake til Ao Nang (2-3 timer)",
+          coord: [8.027668, 98.86252],
+          description: "Sjekk Direct Ferries. Pris ca 500 kr per pers",
+        },
+
+        {
+          title: "9. Taxi til Flyplassen (30 min)",
+          coord: [8.085508, 98.997212],
+          description: "",
         },
       ];
       function showPage(id) {
@@ -253,7 +285,7 @@
         b.onclick = () => showLocation(i);
         locMenu.appendChild(b);
       });
-      locationsMap.setView([7.685, 99.048],7);
+      locationsMap.setView([7.692262, 99.059809], 7);
       function showLocation(i) {
         const l = locations[i];
         locTitle.textContent = l.title;
@@ -264,7 +296,7 @@
           .join("");
         locationsMap.flyTo(l.coord, l.zoom);
       }
-      showLocation(0);
+      // showLocation(0);
       const logisticsMap = L.map("logisticsMap");
       L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(
         logisticsMap,
@@ -293,7 +325,7 @@
         };
         logMenu.appendChild(b);
       });
-      logisticsMap.setView([41.333, 68.554],3);
+      logisticsMap.setView([41.333, 68.554], 3);
     </script>
   </body>
 </html>
